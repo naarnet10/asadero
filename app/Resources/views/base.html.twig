@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/proyecto/css/demo.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/proyecto/css/grid_24.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/proyecto/css/ie.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/proyecto/css/reset.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/proyecto/css/slider.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/proyecto/css/style.css') }}" type="text/css" rel="stylesheet" />
+            <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+            <script src="{{ asset('bundles/proyecto/js/jquery-1.7.min.js') }}" type="text/javascript" ></script>
+            <script src="{{ asset('bundles/proyecto/js/html5.js') }}" type="text/javascript" ></script>
+            <script src="{{ asset('bundles/proyecto/js/jquery.easing.1.3.js') }}" type="text/javascript" ></script>
+            <script src="{{ asset('bundles/proyecto/js/tms-0.4.1.js') }}" type="text/javascript" ></script>
+            <script src="{{ asset('bundles/proyecto/js/uCarousel.js') }}" type="text/javascript"  ></script>
+        {% endblock %}
+
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

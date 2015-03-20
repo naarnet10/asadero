@@ -1,0 +1,71 @@
+{%extends '::base.html.twig'%}
+
+{% block body %}
+    <header>                   	
+        <h1><a href="index.html"><img src="{{asset('bundles/proyecto/images/logo.png')}}" alt=""></a></h1> 
+        <nav>  
+            <ul class="menu">
+                <li class="current"><a href="index.html">about</a></li>
+                <li><a href="wedding.html">wedding</a></li>
+                <li><a href="album.html">album</a></li>
+                <li><a href="links.html">links</a></li>
+                <li><a href="wishes.html">your wishes</a></li>
+                <li><a href="contacts.html">contacts</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <div id="slide">
+        <div class="slider">
+            <ul class="items">
+                <li><img src="{{asset('bundles/proyecto/images/slide-1.jpg')}}" alt="" /></li>
+                <li><img src="{{asset('bundles/proyecto/images/slide-2.jpg')}}" alt="" /></li>
+                <li><img src="{{asset('bundles/proyecto/images/slide-3.jpg')}}" alt="" /></li>
+                <li><img src="{{asset('bundles/proyecto/images/slide-4.jpg')}}" alt="" /></li>
+            </ul>
+        </div>
+        <ul class="pags">
+            <li><a href="#"><img src="{{asset('bundles/proyecto/images/slide-1-small.jpg')}}" alt=""><span></span></a></li>
+            <li><a href="#"><img src="{{asset('bundles/proyecto/images/slide-2-small.jpg')}}" alt=""><span></span></a></li>
+            <li><a href="#"><img src="{{asset('bundles/proyecto/images/slide-3-small.jpg')}}" alt=""><span></span></a></li>
+            <li><a href="#"><img src="{{asset('bundles/proyecto/images/slide-4-small.jpg')}}" alt=""><span></span></a></li>
+        </ul>
+        <a href="#" class="prev">&nbsp;</a><a href="#" class="next">&nbsp;</a>
+    </div>
+{% block content %}{% endblock%}
+{% block footer %}
+    <footer>
+        <p><strong>© 2012  Kate&amp;Leo</strong><br> <a class="link" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">Website Template</a> by TemplateMonster.com</p>
+        <div class="soc-icons"><a href="#"><img src="{{asset('bundles/proyecto/images/icon-1.png')}}" alt=""></a><a href="#"><img src="{{asset('bundles/proyecto/images/icon-2.png')}}" alt=""></a><a href="#"><img src="images/icon-3.png" alt=""></a></div>
+    </footer>
+{% endblock%}
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript">
+        
+        $(document).ready(function(){	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:'.prev',
+				nextBu:'.next',
+				playBu:false,
+				duration:800,
+				preset:'fade',
+				pagination:'.pags',
+				pagNums:false,
+				slideshow:7000,
+				numStatus:false,
+				banners:false,
+				waitBannerAnimation:false,
+				progressBar:false
+			});		
+		});
+        
+        
+        
+        
+    </script>
+
+
+{% endblock%}
+
